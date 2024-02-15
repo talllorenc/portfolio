@@ -12,5 +12,5 @@ export default function Providers({ children }) {
   if (!mounted) {
     return <>{children}</>;
   }
-  return <ThemeProvider attribute="class" enableSystem defaultTheme="system" disableTransitionOnChange>{children}</ThemeProvider>;
+  return <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>{children}</ThemeProvider>;
 }
