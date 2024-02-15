@@ -52,7 +52,7 @@ const Navigation = () => {
       <div className="flex items-center text-xl font-bold border-t-2 border-[#767676] px-4 py-1 rounded-full shadow-lg shadow-[#F75380]">
         <Link href="/" className="transistion duration-300 ease-in-out mr-4 hover:scale-90">
           <Image
-            src="/navbar/home.png"
+            src="/Navbar/home.png"
             width={30}
             height={30}
             alt="home image"

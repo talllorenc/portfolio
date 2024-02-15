@@ -30,11 +30,23 @@ a {
   background: linear-gradient(to bottom,#ff3067, #5d1326, black);
 } */
 
-/* .image-bg{
-  background-image: url('');
+.contacts-bg{
+  background-image: url('/Contacts/contacts-bg.jpg');
   background-size: cover;
   background-position: center;
-} */
+}
+
+.main-bg-dark{
+  background-image: url('/main-dark.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.main-bg-light{
+  background-image: url('/main-light.jpeg');
+  background-size: cover;
+  background-position: center;
+}
 
 /* @keyframes pop {
   0%, 100% {
