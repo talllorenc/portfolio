@@ -9,17 +9,17 @@ import Transition from "./Transistion";
 const links = [
   {
     id: 1,
-    name: "about",
+    name: "About",
     link: "/about",
   },
   {
     id: 2,
-    name: "experience",
-    link: "/projects",
+    name: "Experience",
+    link: "/experience",
   },
   {
     id: 3,
-    name: "contacts",
+    name: "Contacts",
     link: "/contacts",
   },
 ];
@@ -49,7 +49,15 @@ const Navigation = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0  flex justify-center items-center p-4 bg-transparent z-[50]">
       {isRouting && <Transition />}
-      <div className="flex items-center text-xl font-bold border-t-2 border-[#767676] px-8 py-1 rounded-full shadow-lg shadow-[#F75380]">
+      <div className="flex items-center text-xl font-bold border-t-2 border-[#767676] px-4 py-1 rounded-full shadow-lg shadow-[#F75380]">
+        <Link href="/" className="transistion duration-300 ease-in-out mr-4 hover:scale-90">
+          <Image
+            src="/navbar/home.png"
+            width={30}
+            height={30}
+            alt="home image"
+          />
+        </Link>
         {links.map((link) => (
           <Link
             key={link.name}

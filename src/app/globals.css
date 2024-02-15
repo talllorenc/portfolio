@@ -28,15 +28,15 @@ a {
 
 /* .gradient-bg {
   background: linear-gradient(to bottom,#ff3067, #5d1326, black);
-}
+} */
 
-.image-bg{
+/* .image-bg{
   background-image: url('');
   background-size: cover;
   background-position: center;
-}
+} */
 
-@keyframes pop {
+/* @keyframes pop {
   0%, 100% {
     transform: scale(1);
   }
@@ -47,7 +47,7 @@ a {
 
 .pop-element {
   animation: pop 3s infinite ease-in-out;
-}
+} */
 
 @keyframes rotateAround {
   from {
@@ -56,7 +56,11 @@ a {
   to {
     transform: rotate(360deg);
   }
-} */
+}
+
+.spinner-border {
+  animation: rotateAround 3s infinite ease-in-out;
+}
 
 .dark{
   background: #1f1f1f;

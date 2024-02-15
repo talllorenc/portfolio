@@ -6,13 +6,13 @@ const links = [
   {
     id: 1,
     name: "instagram",
-    url: "/navbar/instagram.png",
+    url: "/Navbar/instagram.png",
     href: "#",
   },
   {
     id: 2,
     name: "github",
-    url: "/navbar/github.png",
+    url: "/Navbar/github.png",
     href: "#",
   },
 ];
@@ -20,10 +20,10 @@ const links = [
 const Navbar = () => {
   return (
     <nav className="fixed top-0 z-[40] w-full h-[80px] bg-transparent flex justify-between items-center px-4">
-      <Link href="/" className="flex flex-row gap-3 items-center">
+      <div href="/" className="flex flex-row gap-3 items-center">
         <div className="relative">
           <Image
-            src="/navbar/main_logo.png"
+            src="/Navbar/main_logo.png"
             alt="logo"
             width={30}
             height={30}
@@ -31,12 +31,9 @@ const Navbar = () => {
           />
         </div>
         <h1 className="text-2xl font-semibold">
-          talllorenc{" "}
-          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#f75380] to-[#0075ff]">
-            dev
-          </span>
+          talllorenc
         </h1>
-      </Link>
+      </div>
 
       <div className="flex flex-row gap-5">
         <ThemeSwitcher />
