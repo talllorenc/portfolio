@@ -1,6 +1,5 @@
 import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher";
 import Image from "next/image";
-import Link from "next/link";
 
 const links = [
   {
@@ -30,12 +29,10 @@ const Navbar = () => {
             className="w-full h-full object-contain rounded-xl"
           />
         </div>
-        <h1 className="text-2xl font-semibold">
-          talllorenc
-        </h1>
+        <h1 className="text-2xl font-semibold">talllorenc</h1>
       </div>
 
-      <div className="flex flex-row gap-5">
+      <div className="flex flex-row items-center gap-5">
         <ThemeSwitcher />
         <div className="hidden in:flex items-center gap-4">
           {links.map((item) => (

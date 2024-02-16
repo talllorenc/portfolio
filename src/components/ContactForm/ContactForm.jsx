@@ -5,6 +5,7 @@ import * as yup from "yup";
 import { useFormik } from "formik";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
+import ContactsPopup from "../Popups/ContactsPopup";
 
 const basicSchema = yup.object().shape({
   name: yup
@@ -95,7 +96,7 @@ const ContactForm = ({}) => {
             value={values.name}
             onChange={handleChange}
           />
-          <label for="name" className="text-[#8c8b8b] flex items-center gap-1">
+          <label form="name" className="text-[#8c8b8b] flex items-center gap-1">
             <span className="text-red-600 text-lg mr-1">*</span>
             Must be 15 characters or less
           </label>
@@ -119,7 +120,10 @@ const ContactForm = ({}) => {
             value={values.email}
             onChange={handleChange}
           />
-          <label for="email" className="text-[#8c8b8b] flex items-center gap-1">
+          <label
+            form="email"
+            className="text-[#8c8b8b] flex items-center gap-1"
+          >
             <span className="text-red-600 text-lg mr-1">*</span>
             Required field
           </label>
@@ -143,7 +147,10 @@ const ContactForm = ({}) => {
             value={values.message}
             onChange={handleChange}
           />
-          <label for="email" className="text-[#8c8b8b] flex items-center gap-1">
+          <label
+            form="message"
+            className="text-[#8c8b8b] flex items-center gap-1"
+          >
             <span className="text-red-600 text-lg mr-1">*</span>
             Must be 100 characters or less
           </label>
@@ -177,16 +184,7 @@ const ContactForm = ({}) => {
         </div>
       </form>
       <div className="flex items-center justify-center mt-8">
-        {success && !sending ? (
-          <p className="flex gap-1 text-center items-center text-green-600 dark:text-green-500 py-1 px-2 w-fit text-lg rounded-md bg-green-100 dark:bg-green-950 border border-green-600 dark:border-green-500">
-            The message has been sent successfully
-          </p>
-        ) : null}
-        {error && !sending ? (
-          <p className="flex gap-1 items-center text-center text-red-600 dark:text-red-500 py-1 px-2 w-fit text-lg rounded-md bg-red-100 dark:bg-red-950 border border-red-600 dark:border-red-500">
-            The message has not been sent, please try again later
-          </p>
-        ) : null}
+        <ContactsPopup success={success} sending={sending} error={error} />
       </div>
     </div>
   );
