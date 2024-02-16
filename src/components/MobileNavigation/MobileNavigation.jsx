@@ -78,7 +78,7 @@ export const MobileNavigation = () => {
               onClick={() => setIsOpen(false)}
               key={link.name}
               href={link.link}
-              className="text-[14px] font-bold transistion duration-300 ease-in-out hover:scale-110 hover:text-[#f75380]"
+              className="text-[14px] xs2:text-lg font-bold transistion duration-300 ease-in-out hover:scale-110 hover:text-[#f75380]"
             >
               {link.name}
             </Link>
