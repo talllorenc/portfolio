@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import Experience from "@/components/Experience/Experience";
 import InfiniteSlider from "@/components/Sliders/InfiniteSlider";
 
-const page = () => {
+const ExperiencePage = () => {
   const { theme } = useTheme();
   return (
     <div
@@ -21,4 +21,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ExperiencePage;

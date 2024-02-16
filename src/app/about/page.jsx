@@ -63,10 +63,10 @@ const AboutPage = () => {
           className=""
         >
           <span className="text-md in:text-xl dark:text-[#9c9b9b]">
-            Hi there! My name is Alexander, and I'm a web developer passionate
-            about crafting digital experiences. I've been working in web
+            Hi there! My name is Alexander, and Im a web developer passionate
+            about crafting digital experiences. Ive been working in web
             development for over a year, using the latest technologies to build
-            robust and dynamic web applications. I'm also actively engaged in
+            robust and dynamic web applications. Im also actively engaged in
             learning both front-end and back-end development to expand my skills
             and stay updated with industry trends. From front-end development
             using <span className="text-orange-500 font-bold">HTML</span>,{" "}
