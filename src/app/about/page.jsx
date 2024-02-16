@@ -62,7 +62,7 @@ const AboutPage = () => {
           transition={{ delay: 1.2, duration: 1, ease: "easeInOut" }}
           className=""
         >
-          <span className="text-md in:text-xl dark:text-[#9c9b9b]">
+          <span className="text-md in:text-xl text-[#6c6b6b] dark:text-[#9c9b9b]">
             Hi there! My name is Alexander, and Im a web developer passionate
             about crafting digital experiences. Ive been working in web
             development for over a year, using the latest technologies to build
@@ -95,7 +95,7 @@ const AboutPage = () => {
                 />
               </div>
               <div className="">
-                <div className="text-base font-medium">Alexandr Boyarchuk</div>
+                <div className="text-base font-medium text-[#6c6b6b] dark:text-[#9c9b9b]">Alexandr Boyarchuk</div>
                 <div className="text-base font-medium text-[#F75380]">
                   web-developer
                 </div>

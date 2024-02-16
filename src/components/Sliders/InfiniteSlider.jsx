@@ -71,35 +71,34 @@ const slides = [
 
 const InfiniteSlider = () => {
   return (
-    <div className="in:hidden">
-    <div className="container">
-      <Swiper
-        modules={[Pagination]}
-        spaceBetween={50} //Margin
-        slidesPerView={3} //Conunt Slides
-        slidesPerGroup={3} //Count Swipe
-        loop={true} //Repeat
-        navigation={false}
-        pagination={{ clickable: true }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
-        {slides.map((slide) => (
-          <SwiperSlide key={slide.id}>
-            <div className="flex items-center justify-center">
-              <Image
-                width={200}
-                height={200}
-                alt={slide.title}
-                src={slide.url}
-                className="rounded-xl w-full"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-  </div>
+
+      <div className="">
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={50} //Margin
+          slidesPerView={3} //Conunt Slides
+          slidesPerGroup={3} //Count Swipe
+          loop={true} //Repeat
+          navigation={false}
+          pagination={{ clickable: true }}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id}>
+              <div className="flex items-center justify-center">
+                <Image
+                  width={200}
+                  height={200}
+                  alt={slide.title}
+                  src={slide.url}
+                  className="rounded-xl w-full"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
   );
 };
 

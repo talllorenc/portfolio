@@ -48,7 +48,7 @@ a {
   background-position: center;
 }
 
-/* @keyframes pop {
+@keyframes pop {
   0%, 100% {
     transform: scale(1);
   }
@@ -59,7 +59,7 @@ a {
 
 .pop-element {
   animation: pop 3s infinite ease-in-out;
-} */
+}
 
 @keyframes rotateAround {
   from {

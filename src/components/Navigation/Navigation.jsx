@@ -67,7 +67,7 @@ const Navigation = () => {
             <Link
               key={link.name}
               href={link.link}
-              className="transistion duration-300 ease-in-out px-4 hover:scale-110 hover:text-[#f75380]"
+              className="transistion duration-300 ease-in-out text-[#9c9b9b] px-4 hover:scale-110 hover:text-[#f75380]"
             >
               {link.name}
             </Link>

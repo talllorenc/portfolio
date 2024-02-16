@@ -91,13 +91,13 @@ const ContactForm = ({}) => {
             className={
               errors.name && touched.name
                 ? "w-full border-red-500 focus:outline-none border-2 border-red-500 bg-inherit p-2 rounded-lg"
-                : "focus:border-[#F75380] focus:outline-none focus:ring-[#F75380] w-full border-2 border-[#8c8b8b] bg-inherit p-2 rounded-lg"
+                : "focus:border-[#F75380] focus:outline-none focus:ring-[#F75380] w-full border-2 border-[#9c9b9b] bg-inherit p-2 rounded-lg"
             }
             onBlur={handleBlur}
             value={values.name}
             onChange={handleChange}
           />
-          <label form="name" className="text-[#8c8b8b] flex items-center gap-1">
+          <label form="name" className="text-[#6c6b6b] dark:text-[#9c9b9b] flex items-center gap-1">
             <span className="text-red-600 text-lg mr-1">*</span>
             Must be 15 characters or less
           </label>
@@ -115,7 +115,7 @@ const ContactForm = ({}) => {
             className={
               errors.email && touched.email
                 ? "w-full border-red-500 focus:outline-none border-2 border-red-500 bg-inherit p-2 rounded-lg"
-                : "focus:border-[#F75380] focus:outline-none focus:ring-[#F75380] w-full border-2 border-[#8c8b8b] bg-inherit p-2 rounded-lg"
+                : "focus:border-[#F75380] focus:outline-none focus:ring-[#F75380] w-full border-2 border-[#9c9b9b] bg-inherit p-2 rounded-lg"
             }
             onBlur={handleBlur}
             value={values.email}
@@ -123,7 +123,7 @@ const ContactForm = ({}) => {
           />
           <label
             form="email"
-            className="text-[#8c8b8b] flex items-center gap-1"
+            className="text-[#6c6b6b] dark:text-[#9c9b9b] flex items-center gap-1"
           >
             <span className="text-red-600 text-lg mr-1">*</span>
             Required field
@@ -142,7 +142,7 @@ const ContactForm = ({}) => {
             className={
               errors.message && touched.message
                 ? "resize-none h-[100px] w-full border-red-500 focus:outline-none border-2 border-red-500 bg-inherit p-2 rounded-lg"
-                : "resize-none h-[100px] focus:border-[#F75380] focus:outline-none focus:ring-[#F75380] w-full border-2 border-[#8c8b8b] bg-inherit p-2 rounded-lg"
+                : "resize-none h-[100px] focus:border-[#F75380] focus:outline-none focus:ring-[#F75380] w-full border-2 border-[#9c9b9b] bg-inherit p-2 rounded-lg"
             }
             onBlur={handleBlur}
             value={values.message}
@@ -150,7 +150,7 @@ const ContactForm = ({}) => {
           />
           <label
             form="message"
-            className="text-[#8c8b8b] flex items-center gap-1"
+            className="text-[#6c6b6b] dark:text-[#9c9b9b] flex items-center gap-1"
           >
             <span className="text-red-600 text-lg mr-1">*</span>
             Must be 100 characters or less
@@ -180,7 +180,7 @@ const ContactForm = ({}) => {
           </button>
           <div className="flex gap-2 items-center">
             <p className="text-red-500">*</p>
-            <p className="text-[#8c8b8b]"> - Required field</p>
+            <p className="text-[#6c6b6b] dark:text-[#9c9b9b]"> - Required field</p>
           </div>
         </div>
       </form>

@@ -67,8 +67,8 @@ const Experience = () => {
   return (
     <div className="flex flex-wrap  in:gap-2 md:gap-4 lg:gap-8 justify-center">
       {links.map((item) => (
-        <div key={item.id} className="hidden in:flex flex-col items-center transition duration-300 ease-in-out p-2 hover:scale-110">
-          <p className="text-[#8c8b8b] text-lg font-medium">{item.name}</p>
+        <div key={item.id} className="flex flex-col items-center transition duration-300 ease-in-out p-2 hover:scale-110">
+          <p className="text-[#6c6b6b] dark:text-[#9c9b9b] text-lg font-medium">{item.name}</p>
           <Image src={item.url} width={80} height={80} alt={item.name} className="mt-2 in:w-[50px] md:w-[70px] lg:w-[80px]"/>
         </div>
       ))}
