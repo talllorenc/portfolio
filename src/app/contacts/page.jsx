@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import ContactForm from "@/components/ContactForm/ContactForm";
 import React from "react";
 
-const page = () => {
+const ContactsPage = () => {
   const { theme } = useTheme();
 
   return (
@@ -21,4 +21,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ContactsPage;
