@@ -83,3 +83,8 @@ a {
   background-clip: text;
   background-image: linear-gradient(to left, #f75380, #0075ff);
 }
+
+#infiniteSlider .swiper-wrapper{
+  width: 100%;
+  transition-timing-function: linear !important;
+}
