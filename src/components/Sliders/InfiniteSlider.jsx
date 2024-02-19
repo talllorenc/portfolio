@@ -59,7 +59,7 @@ const slides = [
   },
   {
     id: 11,
-    name: "stripe",
+    name: "Stripe",
     url: "/Experience/stripe.webp",
   },
   {

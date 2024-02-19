@@ -40,13 +40,6 @@ const ExperiencePage = () => {
           transition={{ delay: 1, duration: 1, ease: "easeInOut" }}
           className=""
         >
-          {" "}
-          <div className="flex justify-between items-center w-full">
-            <h1 className="text-2xl in:text-3xl font-bold p-2">Technologies</h1>
-            <a className="py-1 px-8 bg-[#f75380] text-lg font-bold rounded pop-element cursor-pointer">
-              RESUME
-            </a>
-          </div>
         </motion.div>
         <motion.div
           variants={TransitionVariants}
@@ -73,8 +66,8 @@ const ExperiencePage = () => {
           transition={{ delay: 1.2, duration: 1, ease: "easeInOut" }}
           className=""
         >
-          <div className="mt-8 text-center">
-            <span className="text-xl text-[#6c6b6b] dark:text-[#9c9b9b] ">
+          <div className="mt-8 text-center md:text-xl">
+            <span className="text-md text-[#6c6b6b] dark:text-[#9c9b9b] ">
               Primarily, my focus lies within the{" "}
               <span className="text-red-500 font-bold">MERN</span> stack,
               consisting of{" "}

@@ -50,7 +50,7 @@ const Navigation = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0  flex justify-center items-center p-4 bg-transparent z-[50]">
       {isRouting && <Transition />}
-      <div className="hidden in:flex items-center text-xl font-bold border-t-2 border-[#767676] px-4 py-1 rounded-full shadow-lg shadow-[#F75380]">
+      <div className="hidden in:flex items-center text-xl font-bold border-t-2 border-[#767676] px-4 py-2 rounded-full">
         <Link
           href="/"
           className="transistion duration-300 ease-in-out mr-4 hover:scale-90"

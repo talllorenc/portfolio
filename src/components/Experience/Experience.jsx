@@ -53,7 +53,7 @@ const links = [
   },
   {
     id: 11,
-    name: "stripe",
+    name: "Stripe",
     url: "/Experience/stripe.webp",
   },
   {
