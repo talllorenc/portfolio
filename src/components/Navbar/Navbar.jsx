@@ -18,7 +18,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 z-[40] w-full h-[80px] bg-transparent flex justify-between items-center px-4">
+    <nav className="fixed top-0 z-[40] w-full h-[80px] backdrop-blur flex justify-between items-center px-4 z-[50]">
       <div href="/" className="flex flex-row gap-3 items-center">
         <div className="relative">
           <Image
@@ -29,23 +29,17 @@ const Navbar = () => {
             className="w-full h-full object-contain rounded-xl"
           />
         </div>
-        <h1 className="text-2xl font-semibold">talllorenc</h1>
+        <h1 className="text-4xl font-semibold">CW.</h1>
       </div>
-
-      <div className="flex flex-row items-center gap-5">
-        <ThemeSwitcher />
-        <div className="hidden in:flex items-center gap-4">
-          {links.map((item) => (
-            <a
-              key={item.id}
-              href={item.href}
-              alt={item.name}
-              className="transistion duration-300 ease-in-out hover:scale-90"
-            >
-              <Image src={item.url} width={30} height={30} alt={item.name} />
-            </a>
-          ))}
-        </div>
+      <div className="flex gap-4">
+      <ThemeSwitcher />
+        <a
+          download
+          href="#"
+          className="hidden in:block px-6 py-1 border-2 border-black dark:border-white mr-auto rounded-lg font-bold text-lg transition duration-300 ease-in-out hover:scale-110"
+        >
+          RESUME
+        </a>
       </div>
     </nav>
   );

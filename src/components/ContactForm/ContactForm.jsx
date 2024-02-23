@@ -81,7 +81,7 @@ const ContactForm = ({}) => {
       >
         <div>
           {errors.name && touched.name && (
-            <p className="text-red-500">{errors.name}</p>
+            <p className="text-red-500 font-medium">{errors.name}</p>
           )}
           <input
             id="name"
@@ -105,7 +105,7 @@ const ContactForm = ({}) => {
 
         <div>
           {errors.email && touched.email && (
-            <p className="text-red-500">{errors.email}</p>
+            <p className="text-red-500 font-medium">{errors.email}</p>
           )}
           <input
             id="email"
@@ -132,7 +132,7 @@ const ContactForm = ({}) => {
 
         <div>
           {errors.message && touched.message && (
-            <p className="text-red-500">{errors.message}</p>
+            <p className="text-red-500 font-medium">{errors.message}</p>
           )}
           <textarea
             id="message"

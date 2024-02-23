@@ -27,7 +27,7 @@ const ExperiencePage = () => {
   const { theme } = useTheme();
   return (
     <div
-      className={`h-screen flex flex-col items-center justify-center ${
+      className={`mt-40 flex flex-col items-center justify-center ${
         theme === "dark" ? "dark-bg" : "light-bg"
       }`}
     >
@@ -40,6 +40,7 @@ const ExperiencePage = () => {
           transition={{ delay: 1, duration: 1, ease: "easeInOut" }}
           className=""
         >
+          <h1 className="text-6xl font-bold text-center">Experience</h1>
         </motion.div>
         <motion.div
           variants={TransitionVariants}
