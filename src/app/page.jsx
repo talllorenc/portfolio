@@ -8,8 +8,8 @@ export default function Home() {
   const { theme } = useTheme();
   return (
     <main
-      className={`h-screen flex items-center justify-center  ${
-        theme === "dark" ? "main-bg-dark" : "main-bg-light"
+      className={`h-screen flex items-center justify-center ${
+        theme === "dark" ? "dark-bg" : "light-bg"
       }`}
     >
       {/* <div className="container flex flex-col gap-4">

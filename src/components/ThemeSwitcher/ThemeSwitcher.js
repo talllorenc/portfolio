@@ -16,7 +16,7 @@ const ThemeSwitcher = () => {
   }
 
   return (
-    <div className="bg-transparent flex flex-col in:flex-row in:gap-4 in:items-center">
+    <div className="bg-transparent flex gap-4 items-center mt-4 in:mt-0">
       <button onClick={() => setTheme("dark")} className="flex items-center gap-2 justify-between transition duration-300 easy-in-out hover:opacity-70">
         Dark
         <div className={`w-3 h-3 border ${theme === "dark" ? "bg-green-500 rounded-full" : "bg-inherit border-black"}`}></div>

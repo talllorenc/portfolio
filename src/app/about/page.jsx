@@ -1,9 +1,15 @@
 "use client";
 
+import { useLayoutEffect } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Footer from "@/components/Footer/Footer";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const TransitionVariants = {
   initial: {
@@ -23,45 +29,43 @@ const TransitionVariants = {
   },
 };
 
-const links = [
-  {
-    id: 1,
-    name: "instagram",
-    href: "#",
-    url: "/Navbar/instagram.png",
-  },
-  {
-    id: 2,
-    name: "github",
-    href: "#",
-    url: "/Navbar/github.png",
-  },
-  {
-    id: 3,
-    name: "telegram",
-    href: "#",
-    url: "/Navbar/telegram.png",
-  },
-];
-
 const AboutPage = () => {
   const { theme } = useTheme();
 
+  useLayoutEffect(() => {
+    const comments = document.querySelectorAll(".animate-block");
+    comments.forEach((comment) => {
+      gsap.to(comment, {
+        opacity: 1,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: comment,
+          start: "top-=200px center",
+          end: "top-=40px center+=30px",
+          scrub: 2,
+          markers: false,
+        },
+      });
+    });
+
+    gsap.to("#animation-line-about", {
+      height: "100%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#animation-container-about",
+        scrub: true,
+        markers: false,
+        start: "top center+=150px",
+        end: "bottom center+=230px",
+      },
+    });
+  }, []);
+
   return (
-    <div
-      className={`h-screen flex flex-col items-center justify-center ${
-        theme === "dark" ? "main-bg-dark" : "main-bg-light"
-      }`}
-    >
-      <div className="container">
-        <motion.div
-          variants={TransitionVariants}
-          initial="initial"
-          exit="exit"
-          animate="animate"
-          transition={{ delay: 1.2, duration: 1, ease: "easeInOut" }}
-          className=""
-        >
+    <div className={`mt-40 ${theme === "dark" ? "dark-bg" : "light-bg"}`}>
+      <div className="container flex flex-col gap-20 ">
+        <div className="flex flex-col gap-12 items-center">
+          <h1 className="text-6xl font-bold text-center">About me</h1>
           <span className="text-md in:text-xl text-[#6c6b6b] dark:text-[#9c9b9b]">
             Hi there! My name is Alexander, and Im a web developer passionate
             about crafting digital experiences. Ive been working in web
@@ -74,61 +78,120 @@ const AboutPage = () => {
             <span className="text-[#fdc93d] font-bold">JavaScript</span> to
             various frameworks and tools
           </span>
-        </motion.div>
-        <div className="flex flex-col in:flex-row in:justify-between items-center mt-4">
-          <motion.div
-            variants={TransitionVariants}
-            initial="initial"
-            exit="exit"
-            animate="animate"
-            transition={{ delay: 0.8, duration: 1, ease: "easeInOut" }}
-            className=""
-          >
-            <div className="flex items-center gap-2">
-              <div className="">
-                <Image
-                  width={70}
-                  height={70}
-                  className="rounded-full w-[50px] h-[50px] in:w-[70px] in:h-[70px]"
-                  src="/About/me.jpg"
-                  alt="profile img"
-                />
-              </div>
-              <div className="">
-                <div className="text-base font-medium text-[#6c6b6b] dark:text-[#9c9b9b]">Alexandr Boyarchuk</div>
-                <div className="text-base font-medium text-[#F75380]">
-                  web-developer
-                </div>
-              </div>
-            </div>
-          </motion.div>
+          <div className="flex flex-col items-center">
+            <p className="text-xl font-bold text-[#f75380]">SCROLL</p>
+            <Image
+              src="/arrow-right.png"
+              className="arrow-bottom-move"
+              width={30}
+              height={30}
+              alt="arrow image"
+            />
+          </div>
+        </div>
 
-          <motion.div
-            variants={TransitionVariants}
-            initial="initial"
-            exit="exit"
-            animate="animate"
-            transition={{ delay: 1, duration: 1.3, ease: "easeInOut" }}
-            className=""
+        <div id="animation-container-about" className="flex gap-8 relative">
+          <div
+            id="animation-line-about"
+            className="w-[2px] bg-[#f75380] hidden md:block absolute left-1/2 -translate-x-1/2"
           >
-            <div className="flex items-center gap-4 in:gap-8 mt-6 in:mt-0">
-              {links.map((item) => (
-                <a
-                  key={item.id}
-                  href={item.href}
-                  target="_blank"
-                  className="transistion duration-300 ease-in-out hover:scale-110"
-                >
-                  <Image
-                    src={item.url}
-                    width={40}
-                    height={40}
-                    alt={item.name}
-                  />
-                </a>
-              ))}
+            <span className="absolute -translate-x-1/2 left-1/2 bottom-0 w-3 h-3 border-2 border-[#f75380] rounded-full bg-black dark:bg-white block"></span>
+          </div>
+          <div className="flex flex-col gap-12">
+            <div
+              id="div1"
+              className="animate-block flex justify-between gap-16"
+            >
+              <div className="md:w-1/2">
+                <span className="px-4 py-1 text-2xl font-bold bg-[#f75380] mr-auto rounded-xl">
+                  1
+                </span>
+                <p className="text-2xl font-medium mt-4">Constant progress</p>
+                <span className="text-lg text-[#6c6b6b] dark:text-[#9c9b9b]">
+                  Not a day went by that I didnt learn something. Every day I
+                  improve my programming and architecture skills. I believe that
+                  consistency is the key to success in any aspect of life.
+                </span>
+              </div>
+              <div className="w-1/2 hidden md:block"></div>
             </div>
-          </motion.div>
+            <div
+              id="div2"
+              className="opacity-0 animate-block flex justify-between gap-16"
+            >
+              <div className="w-1/2 hidden md:block"></div>
+              <div className="md:w-1/2">
+                <span className="px-4 py-1 text-2xl font-bold bg-[#f75380] mr-auto rounded-xl">
+                  2
+                </span>
+                <p className="text-2xl font-medium mt-4">Personal Qualities</p>
+                <span className="text-lg text-[#6c6b6b] dark:text-[#9c9b9b]">
+                  I am an attentive, inquisitive, responsible and, most
+                  importantly, a purposeful person. These qualities help me
+                  improve and get better every day.
+                </span>
+              </div>
+            </div>
+            <div
+              id="div3"
+              className="opacity-0 animate-block flex justify-between gap-16"
+            >
+              <div className="md:w-1/2">
+                <span className="px-4 py-1 text-2xl font-bold bg-[#f75380] mr-auto rounded-xl">
+                  3
+                </span>
+                <p className="text-2xl font-medium mt-4">
+                  Commercial Development Experience
+                </p>
+                <span className="text-lg text-[#6c6b6b] dark:text-[#9c9b9b]">
+                  With hands-on experience in this field, Ive navigated through
+                  various projects, honing my skills and understanding the
+                  intricacies of the commercial programming. This expertise
+                  equips me to tackle challenges effectively and deliver
+                  innovative solutions.
+                </span>
+              </div>
+              <div className="w-1/2 hidden md:block"></div>
+            </div>
+            <div
+              id="div4"
+              className="opacity-0 animate-block flex justify-between gap-16"
+            >
+              <div className="w-1/2 hidden md:block"></div>
+
+              <div className="md:w-1/2">
+                <span className="px-4 py-1 text-2xl font-bold bg-[#f75380] mr-auto rounded-xl">
+                  4
+                </span>
+                <p className="text-2xl font-medium mt-4">Technology Stack</p>
+                <span className="text-lg text-[#6c6b6b] dark:text-[#9c9b9b]">
+                  At the moment, my main stack is MERN. Using these advanced
+                  technologies, I create reliable and dynamic web applications
+                  that meet modern requirements.
+                </span>
+              </div>
+            </div>
+            <div
+              id="div5"
+              className="opacity-0 animate-block flex justify-between gap-16"
+            >
+              <div className="md:w-1/2">
+                <span className="px-4 py-1 text-2xl font-bold bg-[#f75380] mr-auto rounded-xl">
+                  5
+                </span>
+                <p className="text-2xl font-medium mt-4">Open to Learning</p>
+                <span className="text-lg text-[#6c6b6b] dark:text-[#9c9b9b]">
+                  I firmly believe that growth stems from embracing new
+                  challenges and acquiring fresh knowledge. With an insatiable
+                  curiosity and a proactive attitude, I eagerly welcome
+                  opportunities to expand my skill set and stay at the forefront
+                  of innovation
+                </span>
+              </div>
+              <div className="w-1/2 hidden md:block"></div>
+            </div>
+            <div className="opacity-0 h-[150px]"></div>
+          </div>
         </div>
       </div>
     </div>

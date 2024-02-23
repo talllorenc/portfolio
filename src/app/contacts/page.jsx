@@ -10,7 +10,7 @@ const ContactsPage = () => {
   return (
     <section
       className={`h-screen flex flex-col items-center justify-center ${
-        theme === "dark" ? "contacts-bg" : "main-bg-light"
+        theme === "dark" ? "dark-bg" : "light-bg"
       }`}
     >
       <h1 className="text-3xl font-bold p-2">Contact me</h1>

@@ -4,6 +4,7 @@ import Providers from "./providers";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Navigation from "@/components/Navigation/Navigation";
+import Footer from "@/components/Footer/Footer";
 
 const inconsolata = Inconsolata({ subsets: ["latin"] });
 

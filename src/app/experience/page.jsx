@@ -28,7 +28,7 @@ const ExperiencePage = () => {
   return (
     <div
       className={`h-screen flex flex-col items-center justify-center ${
-        theme === "dark" ? "main-bg-dark" : "main-bg-light"
+        theme === "dark" ? "dark-bg" : "light-bg"
       }`}
     >
       <div className="container">
